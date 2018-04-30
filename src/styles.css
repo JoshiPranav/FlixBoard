@@ -1,19 +1,2 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-.pad-top-50 {
-  padding-top: 50px;
-}
-.pad-top-10 {
-  padding-top: 10px;
-}
-.with-100-pc {
-  width: 100%;
-}
-.pad-top-bottom-10 {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-.small-img {
-  width: 230px;
-  height: 230px;
-}
