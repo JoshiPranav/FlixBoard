@@ -11,7 +11,22 @@
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.pad-left-5 {
+  padding-left: 15px;
+}
 .small-img {
-  width: 230px;
-  height: 230px;
+  width: 180px;
+  height: 180px;
+}
+.left-float {
+  float: left;
+}
+.right-float {
+  float: right;
+}
+.clearfix {
+  overflow: auto;
+}
+.wrap-word {
+  word-wrap: break-word;
 }
