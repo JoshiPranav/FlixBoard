@@ -5,20 +5,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { AppRoutingRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 
 import { MoviesService } from './shared/movies.service';
+import { DetailsComponent } from './details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingRoutingModule
+    AppRoutingModule
   ],
   providers: [MoviesService],
   bootstrap: [AppComponent]

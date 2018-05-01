@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MovieData } from './MovieData';
 import { Movie } from './Movie';
 import { Response } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
@@ -22,7 +23,8 @@ export class MoviesService {
     url = url + '&plot=short&r=json&apikey=ffcb9ce2';
     return this.httpClient.get(url)
               .map(data => {
-                    return data.Search;
+                    const movieData = <MovieData>data;
+                    return movieData.Search;
                   }
               )
               .catch(this.handleError);

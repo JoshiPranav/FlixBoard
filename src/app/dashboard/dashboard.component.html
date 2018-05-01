@@ -18,8 +18,10 @@
           <img class="small-img rounded" src={{item.Poster}} title="{{item.Title}}" />
         </div>
         <div class="pad-left-5">
-          <div class="wrap-word">{{item.Title}}</div>
+          <div class="wrap-word h5">{{item.Title}}</div>
           <h6>{{item.Year}}</h6>
+          <h6>{{item.Type}}</h6>
+          <a [routerLink]="['/details', item.imdbID]">more details >></a>
         </div>
       </div>
     </div>

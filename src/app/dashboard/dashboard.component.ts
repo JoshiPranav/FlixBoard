@@ -17,6 +17,8 @@ export class DashboardComponent {
   }
 
   search() {
-      this.movieService.search(this.title, this.year).subscribe(data => {this.movies = data; });
+      this.movieService.search(this.title, this.year).subscribe(data => {
+        this.movies = data;
+      });
   }
 }
