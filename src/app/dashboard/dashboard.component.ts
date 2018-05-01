@@ -4,7 +4,6 @@ import { Movie } from '../shared/Movie';
 import { MoviesService } from '../shared/movies.service';
 
 @Component({
-  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })

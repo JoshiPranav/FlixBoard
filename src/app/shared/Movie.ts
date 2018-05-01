@@ -4,4 +4,5 @@ export interface Movie {
     imdbID: number;
     Type: string;
     Poster: string;
+    Plot: string;
 }

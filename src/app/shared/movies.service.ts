@@ -7,6 +7,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/throw';
 import { Observable } from 'rxjs/Observable';
+import { MovieDetail } from './MovieDetail';
 
 @Injectable()
 export class MoviesService {
@@ -21,6 +22,7 @@ export class MoviesService {
     }
 
     url = url + '&plot=short&r=json&apikey=ffcb9ce2';
+    console.log(url);
     return this.httpClient.get(url)
               .map(data => {
                     const movieData = <MovieData>data;
@@ -28,6 +30,16 @@ export class MoviesService {
                   }
               )
               .catch(this.handleError);
+  }
+
+  fetch(imdbID: string, plotType: string): Observable<MovieDetail> {
+    const url = 'http://www.omdbapi.com/?i=' + imdbID + '&plot=' + plotType + '&r=json&apikey=ffcb9ce2';
+    return this.httpClient.get(url)
+                  .map(data => {
+                      return <MovieDetail>data;
+                    }
+                  )
+                  .catch(this.handleError);
   }
 
   private handleError(error: Response) {
