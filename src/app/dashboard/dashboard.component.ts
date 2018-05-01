@@ -11,12 +11,12 @@ import { MoviesService } from '../shared/movies.service';
 export class DashboardComponent {
   public year: number;
   public title: string;
-  public movies: Observable<Array<Movie>>;
+  public movies: Movie[];
 
   constructor(private movieService: MoviesService) {
   }
 
   search() {
-     this.movies = this.movieService.search(this.title, this.year);
+      this.movieService.search(this.title, this.year).subscribe(data => {this.movies = data; });
   }
 }
